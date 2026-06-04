@@ -1,24 +1,5 @@
 import Image from "next/image"
 
-const portfolioImages = [
-  {
-    src: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80",
-    alt: "Traditional Japanese architecture at dusk",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=600&q=80",
-    alt: "Cherry blossoms in spring",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600&q=80",
-    alt: "Japanese garden with red bridge",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&q=80",
-    alt: "Tokyo skyline at night",
-  },
-]
-
 export function AboutGuide() {
   return (
     <section className="bg-[#fafafa] py-24 md:py-32">
@@ -85,28 +66,6 @@ export function AboutGuide() {
                 className="object-cover"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Portfolio Grid */}
-        <div className="mt-24">
-          <p className="text-center text-[#bc002d] text-sm tracking-[0.3em] uppercase mb-12">
-            Selected Works
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {portfolioImages.map((image, index) => (
-              <div 
-                key={index}
-                className="aspect-square relative overflow-hidden group"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </div>
